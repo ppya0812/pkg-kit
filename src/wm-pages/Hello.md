@@ -33,7 +33,6 @@ export default {
 | visibility-height     | 滚动高度达到此参数值才出现 BackTop   | number  |            |    400     |
 | on-click     | 点击按钮的回调函数   | Function    |    |     —    |
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

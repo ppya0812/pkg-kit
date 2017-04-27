@@ -1,0 +1,4 @@
+{
+  "button": ["./src/wm-kit/packages/button"],
+  "drawer": ["./src/wm-kit/packages/drawer"]
+}

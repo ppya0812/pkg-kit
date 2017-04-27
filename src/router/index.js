@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import WMinit from '@/wminit/index'
+import WMkit from '@/wm-kit/index'
 import NavConfig from '@/nav.config.json'
 
 Vue.use(VueRouter)
-Vue.use(WMinit)
+Vue.use(WMkit)
 
 let RounterConfig = []
 
@@ -14,7 +14,7 @@ NavConfig.forEach(v => {
   RounterConfig.push({
     path: v.path,
     name: v.name,
-    component: require(`@/pages/${v.component}`)
+    component: require(`@/wm-pages/${v.component}`)
   })
 })
 

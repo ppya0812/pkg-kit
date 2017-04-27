@@ -2,9 +2,9 @@
 
 这是一个文档介绍平台
 
-### ui组件和标签添加： src/wminit/packages
+### ui组件和标签添加： src/wm-kit/packages
 
-### ui组件和标签展示： src/pages
+### ui组件和标签展示： src/wm-pages
 
 ## Build Setup
 
