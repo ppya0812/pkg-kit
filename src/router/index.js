@@ -5,6 +5,11 @@ import WMkit from '@/wm-kit/index'
 import NavConfig from '@/nav.config.json'
 
 Vue.use(VueRouter)
+
+// WmAlert.install = function (Vue) {
+//   Vue.component(WmAlert.name, WmAlert)
+// }
+
 Vue.use(WMkit)
 
 let RounterConfig = []

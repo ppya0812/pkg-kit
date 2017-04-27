@@ -1,4 +1,8 @@
 {
   "button": ["./src/wm-kit/packages/button"],
-  "drawer": ["./src/wm-kit/packages/drawer"]
+  "drawer": ["./src/wm-kit/packages/drawer"],
+  "alert": ["./src/wm-kit/packages/alert"],
+  "carousel": ["./src/wm-kit/packages/carousel"],
+  "scroll": ["./src/wm-kit/packages/scroll"],
+  "sticky": ["./src/wm-kit/packages/sticky"]
 }

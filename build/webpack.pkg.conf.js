@@ -38,7 +38,7 @@ module.exports = {
         warnings: false,
         drop_console: true // 发布时注释掉console.log
       },
-      sourceMap: true
+      sourceMap: false
     }),
     new ExtractTextPlugin({
       filename: utils.assetsPath('[name].css')

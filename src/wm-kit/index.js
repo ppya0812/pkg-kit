@@ -16,7 +16,6 @@ modules.forEach(v => {
   const name = uppercamelcase(v[tag].name.replace(/wm-/, ''))
   components[name] = v[tag]
 })
-console.log('components', components)
 
 export default Object.assign({}, {
   install (Vue) {
