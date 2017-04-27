@@ -7,6 +7,11 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+var markdown = require('markdown-it')({
+  html: true,
+  breaks: true
+})
+
 module.exports = {
   entry: {
     app: './src/main.js'
@@ -19,7 +24,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.md'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
@@ -40,6 +45,11 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
+      },
+      {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader',
+        options: markdown
       },
       {
         test: /\.js$/,

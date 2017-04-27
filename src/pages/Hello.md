@@ -1,3 +1,5 @@
+## 我就是个组件
+
 <template>
   <div class="">
     <h1>{{ msg }}</h1>
@@ -18,6 +20,18 @@ export default {
   }
 }
 </script>
+
+```html
+  标签：<wm-button></wm-button>
+  
+```
+
+### Attributes
+
+| 参数      | 说明    | 类型      | 可选值       | 默认值   |
+|---------- |-------- |---------- |-------------  |-------- |
+| visibility-height     | 滚动高度达到此参数值才出现 BackTop   | number  |            |    400     |
+| on-click     | 点击按钮的回调函数   | Function    |    |     —    |
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
