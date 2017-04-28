@@ -37,7 +37,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
         └─build  （配置文件）
         └─config （配置文件）
         └─dist   （展示页面输出静态资源）
-        └─pkg    （各种组件独立包，直接import里面的js可以使用）
+        └─pkg    （各种组件独立包，直接import里面的js可以使用, 其中index.js是整个包集合）
         └─components.json  （各种组件独立包注册）
 
  
