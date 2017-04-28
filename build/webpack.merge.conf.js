@@ -1,34 +1,29 @@
-var utils = require('./utils')
-var path = require('path')
 var webpack = require('webpack')
-var config = require('../config')
-var baseWebpackConfig = require('./webpack.base.conf')
-var components = require('../components.json')
+var path = require('path')
+var utils = require('./utils')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
 
-var env = config.pkg.env
+var baseWebpackConfig = require('./webpack.base.conf')
 
 module.exports = {
-  entry: components,
+  entry: {
+    app: './src/wm-kit/main.js'
+  },
   output: {
-    path: config.pkg.assetsRoot,
-    filename: '[name].js',
-    publicPath: config.pkg.assetsPublicPath,
-    libraryTarget: 'commonjs2'
+    path: path.resolve(__dirname, '../kit'),
+    filename: 'index.js'
   },
   module: {
     rules: baseWebpackConfig.module.rules.concat(utils.styleLoaders({
-      sourceMap: config.pkg.productionSourceMap,
+      sourceMap: false,
       extract: true
     }))
   },
-  devtool: config.pkg.productionSourceMap ? '#source-map' : false,
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': 'kit'
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -42,15 +37,8 @@ module.exports = {
       },
       sourceMap: false
     }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../kit'),
-        to: config.pkg.assetsSubDirectory,
-        ignore: ['.css']
-      }
-    ]),
     new ExtractTextPlugin({
-      filename: utils.assetsPath('[name].css')
+      filename: '[name].css'
     }),
     new OptimizeCSSPlugin(),
         // new webpack.optimize.CommonsChunkPlugin({

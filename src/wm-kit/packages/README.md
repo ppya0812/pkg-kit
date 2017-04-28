@@ -130,3 +130,8 @@ z-ndex          |         Number     |  10        |                 css中的z-i
         }
     </script>
 ```
+
+导航tab
+图片（放大） 懒加载 vue-lazyloader
+日历
+表单

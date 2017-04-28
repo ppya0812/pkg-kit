@@ -18,9 +18,11 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
+  // entry: './src/wm-kit/index.js',
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
+    // filename: 'wmkit.js'
     filename: utils.assetsPath('js/[name].[chunkhash:5].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash:5].js')
   },

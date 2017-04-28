@@ -9,6 +9,7 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "pkg": "node build/build-pkg.js",
+    "kit": "cross-env NODE_ENV=\"kit\" npm run pkg",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "chalk": "^1.1.3",
     "connect-history-api-fallback": "^1.3.0",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^6.2.1",

@@ -4,19 +4,24 @@
   <div class="">
     <h1>{{ msg }}</h1>
     <router-link to="/test">
-      <wm-button></wm-button>
+      <drawer></drawer>
     </router-link>
     
   </div>
 </template>
 
 <script>
+import drawer from 'pkg/drawer.js'
+
 export default {
   name: 'hello',
   data () {
     return {
       msg: 'Welcome to wm-ui'
     }
+  },
+  components: {
+    drawer
   }
 }
 </script>

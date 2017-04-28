@@ -2,12 +2,12 @@
   <div class="hello">
     <h1>test</h1>
     <wm-button>haha</wm-button>
-    <wm-drawer></wm-drawer>
   </div>
 </template>
 
 <script>
 import '../../pkg/button.js'
+
 export default {
   name: 'hello',
   data () {

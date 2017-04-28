@@ -1,3 +1,7 @@
 import drawer from './src/drawer.vue'
 
-export { drawer }
+drawer.install = function (Vue) {
+  Vue.component(drawer.name, drawer)
+}
+
+export default drawer

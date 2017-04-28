@@ -1,6 +1,7 @@
 require('./check-versions')()
 
-process.env.NODE_ENV = 'pkg'
+// process.env.NODE_ENV = 'pkg'
+var env = process.env.NODE_ENV
 
 var ora = require('ora')
 var rm = require('rimraf')
@@ -8,7 +9,11 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
+
 var webpackConfig = require('./webpack.pkg.conf')
+if (env) {
+  webpackConfig = require('./webpack.merge.conf')
+}
 
 var spinner = ora('building for production...')
 spinner.start()
